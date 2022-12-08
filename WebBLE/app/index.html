@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Atta ul Haleem">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>Smartbell Dashboard</title>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="starter-template.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/135841b62f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="col-lg-8 mx-auto p-3 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 640 512" role="img">
+          <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+          <title>Smartbell</title>
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M112 96c0-17.7 14.3-32 32-32h16c17.7 0 32 14.3 32 32V224v64V416c0 17.7-14.3 32-32 32H144c-17.7 0-32-14.3-32-32V384H64c-17.7 0-32-14.3-32-32V288c-17.7 0-32-14.3-32-32s14.3-32 32-32V160c0-17.7 14.3-32 32-32h48V96zm416 0v32h48c17.7 0 32 14.3 32 32v64c17.7 0 32 14.3 32 32s-14.3 32-32 32v64c0 17.7-14.3 32-32 32H528v32c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32V288 224 96c0-17.7 14.3-32 32-32h16c17.7 0 32 14.3 32 32zM416 224v64H224V224H416z"
+            fill="currentColor"></path>
+        </svg>
+        <span class="fs-4">Smartbell Dashboard</span>
+      </a>
+    </header>
+
+    <main>
+      <div class="row">
+        <div class="col-10">
+          <input class="form-control" id="deviceNameInput" placeholder="Enter device name">
+        </div>
+        <div class="col-2">
+          <button type="button" id="controlButton" class="btn btn-primary">Connect</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3 gy-4">
+          <h5>Connection Status</h5>
+        </div>
+        <div class="col-3 gy-4">
+          <h5 id="connectionStatus">Not Connected</h5>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-6 gy-4 text-center">
+          <i class="fa-solid fa-dumbbell fa-8x"></i>
+          <h4 id="exerciseName">Idle</h4>
+        </div>
+      </div>
+    </main>
+    <footer class="pt-5 my-5 text-muted border-top">
+      Created by Atta ul Haleem &middot; 2022
+    </footer>
+  </div>
+
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="SBscript.js"></script>
+</body>
+
+</html>
