@@ -1,6 +1,7 @@
 const controlButton = document.getElementById("controlButton");
 const deviceNameInput = document.getElementById("deviceNameInput");
 const connectionStatus = document.getElementById("connectionStatus");
+const exerciseName = document.getElementById("exerciseName");
 
 controlButton.addEventListener("click", BLEManager);
 
@@ -14,35 +15,41 @@ async function BLEManager() {
                 { name: deviceNameInput.value },
                 { namePrefix: 'Arduino' },
                 { namePrefix: 'BatteryMonitor' },
-                { namePrefix: 'Smartbell' }
+                { namePrefix: 'Smartbell' },
+                { services: ["1762594c-5e6b-4361-b474-3db93ffbc7f9"] }
                 // services: ['heart_rate']
             ],
-            // optionalServices: ['battery_service']
-            // mention any services needed
+            // optionalServices
         });
 
         const connectedDevice = await device.gatt.connect()
         connectionStatus.textContent = "Connected";
 
-        // get services
-        // const batteryService = await connectedDevice.getPrimaryService("battery_service");
-        // const heartRateService = await connectedDevice.getPrimaryService("heart_rate");
+        // get service
+        const smartbellService = await connectedDevice.getPrimaryService("d9fa4402-bd97-4242-8340-65bbdcbb02e6");
 
-        // or
-        // const batteryLevelCharacteristic = await batteryService.getCharacteristic(0x2A19);
-        // const heartRateCharacteristic = await heartRateService.getCharacteristic(0x2A37);
+        // get characteristic
+        const exerciseCharacteristic = await smartbellService.getCharacteristic("1762594c-5e6b-4361-b474-3db93ffbc7f9");
 
         // read characteristic
-        // const batteryLevel = await batteryLevelCharacteristic.readValue();
-        // const batteryPercent = batteryLevel.getUint8(0);
-        // batteryCharge.textContent = batteryPercent.toString() + "%";
+        const exerciseValue = await exerciseCharacteristic.readValue();
+        const exerciseNumber = exerciseValue.getUint8(0);
+
+        switch (exerciseNumber) {
+            case 1:
+                exerciseName.textContent = "Biceps Curl";
+                break;
+            case 2:
+                exerciseName.textContent = "Lateral Raise";
+                break;
+            case 3:
+                exerciseName.textContent = "Overhead Press";
+                break;
+            default:
+                exerciseName.textContent = "Cannot Identify"
+        }
     }
     catch {
-        if (typeof device !== 'undefined') {
-            connectionStatus.textContent = "Connection Failed";
-        }
-        else {
-            connectionStatus.textContent = "Cancelled"
-        }
+        connectionStatus.textContent = "Not Connected";
     }
 }
