@@ -27,14 +27,9 @@ async function BLEManager() {
         const connectedDevice = await device.gatt.connect()
         connectionStatus.textContent = "Connected";
 
-        // get service
         const smartbellService = await connectedDevice.getPrimaryService(serviceUUID);
-
-        // // get characteristic
         const exerciseCharacteristic = await smartbellService.getCharacteristic(characteristicUUID);
-
         exerciseCharacteristic.startNotifications();
-
         exerciseCharacteristic.addEventListener('characteristicvaluechanged', handleNotifications);
     }
     catch {
@@ -44,7 +39,6 @@ async function BLEManager() {
 
 function handleNotifications(event) {
     let exerciseValue = event.target.value;
-    // let exerciseValue = await exerciseCharacteristic.readValue();
     const exerciseNumber = exerciseValue.getUint8(0);
 
     switch (exerciseNumber) {
