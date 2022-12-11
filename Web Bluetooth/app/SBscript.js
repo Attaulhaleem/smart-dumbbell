@@ -3,6 +3,9 @@ const deviceNameInput = document.getElementById("deviceNameInput");
 const connectionStatus = document.getElementById("connectionStatus");
 const exerciseName = document.getElementById("exerciseName");
 
+const serviceUUID = "d9fa4402-bd97-4242-8340-65bbdcbb02e6";
+const characteristicUUID = "1762594c-5e6b-4361-b474-3db93ffbc7f9";
+
 controlButton.addEventListener("click", BLEManager);
 
 async function BLEManager() {
@@ -16,8 +19,7 @@ async function BLEManager() {
                 { namePrefix: 'Arduino' },
                 { namePrefix: 'BatteryMonitor' },
                 { namePrefix: 'Smartbell' },
-                { services: ["1762594c-5e6b-4361-b474-3db93ffbc7f9"] }
-                // services: ['heart_rate']
+                { services: [serviceUUID] }
             ],
             // optionalServices
         });
@@ -26,30 +28,36 @@ async function BLEManager() {
         connectionStatus.textContent = "Connected";
 
         // get service
-        const smartbellService = await connectedDevice.getPrimaryService("d9fa4402-bd97-4242-8340-65bbdcbb02e6");
+        const smartbellService = await connectedDevice.getPrimaryService(serviceUUID);
 
-        // get characteristic
-        const exerciseCharacteristic = await smartbellService.getCharacteristic("1762594c-5e6b-4361-b474-3db93ffbc7f9");
+        // // get characteristic
+        const exerciseCharacteristic = await smartbellService.getCharacteristic(characteristicUUID);
 
-        // read characteristic
-        const exerciseValue = await exerciseCharacteristic.readValue();
-        const exerciseNumber = exerciseValue.getUint8(0);
+        exerciseCharacteristic.startNotifications();
 
-        switch (exerciseNumber) {
-            case 1:
-                exerciseName.textContent = "Biceps Curl";
-                break;
-            case 2:
-                exerciseName.textContent = "Lateral Raise";
-                break;
-            case 3:
-                exerciseName.textContent = "Overhead Press";
-                break;
-            default:
-                exerciseName.textContent = "Cannot Identify"
-        }
+        exerciseCharacteristic.addEventListener('characteristicvaluechanged', handleNotifications);
     }
     catch {
         connectionStatus.textContent = "Not Connected";
+    }
+}
+
+function handleNotifications(event) {
+    let exerciseValue = event.target.value;
+    // let exerciseValue = await exerciseCharacteristic.readValue();
+    const exerciseNumber = exerciseValue.getUint8(0);
+
+    switch (exerciseNumber) {
+        case 1:
+            exerciseName.textContent = "Biceps Curl";
+            break;
+        case 2:
+            exerciseName.textContent = "Lateral Raise";
+            break;
+        case 3:
+            exerciseName.textContent = "Overhead Press";
+            break;
+        default:
+            exerciseName.textContent = "Cannot Identify"
     }
 }
