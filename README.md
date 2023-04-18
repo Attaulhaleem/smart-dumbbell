@@ -15,7 +15,7 @@ The data collection, model training and testing was done using Edge Impulse Stud
 
 ### Dashboard
 
-:warning: Web Bluetooth is an experimental technology and will only work on compatible browsers. A list of supported browsers is available <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API#browser_compatibility">here</a>.
+:warning: Web Bluetooth is an experimental technology and will only work on <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API#browser_compatibility">compatible browsers</a>.
 
 <a href="https://github.com/Attaulhaleem/smart-dumbbell/blob/main/Web Bluetooth/app/index.html">
   <img src="https://github.com/Attaulhaleem/smart-dumbbell/blob/main/docs/dashboard.png" align="center"/>
