@@ -26,4 +26,5 @@ The data collection, model training and testing was done using Edge Impulse Stud
 ### Acknowledgements
 
 The Smart Dumbbell was largely inspired by <a href="https://microchipdeveloper.com/machine-learning:smartbell-with-edge-impulse">this project</a>.
+
 <a href="https://www.coursera.org/learn/introduction-to-embedded-machine-learning">This course</a> was instrumental in completing this project.
