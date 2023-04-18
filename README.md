@@ -9,7 +9,7 @@ The Smart Dumbbell can classify four types of movements namely Idle, Biceps Curl
 
 ### Edge Impulse
 
-The data collection, model training and testing was done using '''Edge Impulse Studio'''. The project can be accessed <a href="https://studio.edgeimpulse.com/public/161663/latest">here</a>.
+The data collection, model training and testing was done using ```Edge Impulse Studio```. The project can be accessed <a href="https://studio.edgeimpulse.com/public/161663/latest">here</a>.
 
 ---
 
