@@ -20,3 +20,9 @@ The data collection, model training and testing was done using Edge Impulse Stud
 <a href="https://github.com/Attaulhaleem/smart-dumbbell/blob/main/Web Bluetooth/app/index.html">
   <img src="https://github.com/Attaulhaleem/smart-dumbbell/blob/main/docs/dashboard.png" align="center"/>
 </a>
+
+---
+
+### Acknowledgements
+
+The Smart Dumbbell was largely inspired by <a href="https://microchipdeveloper.com/machine-learning:smartbell-with-edge-impulse">this project</a>.
