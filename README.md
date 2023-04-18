@@ -15,7 +15,7 @@ The project data and Arduino inferencing library can be accessed <a href="https:
 
 ### Dashboard
 
-The dashboard will only work on compatible browsers. A list of supported browsers is available <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API#browser_compatibility">here</a>.
+Web Bluetooth is an experimental technology and will only work on compatible browsers. A list of supported browsers is available <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API#browser_compatibility">here</a>.
 
 <a href="https://github.com/Attaulhaleem/smart-dumbbell/blob/main/Web Bluetooth/app/index.html">
   <img src="https://github.com/Attaulhaleem/smart-dumbbell/blob/main/docs/dashboard.png" align="center"/>
