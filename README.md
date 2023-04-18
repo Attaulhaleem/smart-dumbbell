@@ -9,13 +9,13 @@ The Smart Dumbbell can classify four types of movements namely Idle, Biceps Curl
 
 ### Edge Impulse
 
-The data collection, model training and testing was done using Edge Impulse Studio. The project can be accessed <a href="https://studio.edgeimpulse.com/public/161663/latest">here</a>.
+The data collection, model training and testing was done using Edge Impulse Studio. The project can be accessed [here](https://studio.edgeimpulse.com/public/161663/latest).
 
 ---
 
 ### Dashboard
 
-:warning: Web Bluetooth is an experimental technology and will only work on <a href="https://developer.mozilla.org/en-US/doc/Web/API/Web_Bluetooth_API#browser_compatibility">compatible browsers</a>.
+:warning: Web Bluetooth is an experimental technology and will only work on <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API#browser_compatibility">compatible browsers</a>.
 
 <a href="https://github.com/Attaulhaleem/smart-dumbbell/blob/main/Web Bluetooth/app/index.html">
   <img src="https://github.com/Attaulhaleem/smart-dumbbell/blob/main/doc/dashboard.png" align="center"/>
@@ -25,4 +25,4 @@ The data collection, model training and testing was done using Edge Impulse Stud
 
 ### Acknowledgements
 
-The idea for the Smart Dumbbell came from <a href="https://microchipdeveloper.com/machine-learning:smartbell-with-edge-impulse">this project</a>.
+The idea for the Smart Dumbbell came from [this project](https://microchipdeveloper.com/machine-learning:smartbell-with-edge-impulse).
