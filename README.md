@@ -1,4 +1,4 @@
-# smart-dumbbell :muscle:
+# smart-dumbbell
 Real-time workout classification using Arduino Nano 33 BLE Sense, Edge Impulse, and Web Bluetooth.
 
 ## Details
@@ -26,3 +26,4 @@ The data collection, model training and testing was done using Edge Impulse Stud
 ### Acknowledgements
 
 The Smart Dumbbell was largely inspired by <a href="https://microchipdeveloper.com/machine-learning:smartbell-with-edge-impulse">this project</a>.
+<a href="https://www.coursera.org/learn/introduction-to-embedded-machine-learning">This course</a> was instrumental in completing this project.
