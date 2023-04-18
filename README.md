@@ -3,5 +3,10 @@ Real-time workout classification using Arduino Nano 33 BLE Sense, Edge Impulse, 
 
 ---
 
+### Edge Impulse
+
+
 ### Dashboard
-<img src="https://github.com/Attaulhaleem/smart-dumbbell/blob/main/docs/dashboard.png" align="center">
+<a href="https://github.com/Attaulhaleem/smart-dumbbell/blob/main/Web Bluetooth/app/index.html">
+  <img src="https://github.com/Attaulhaleem/smart-dumbbell/blob/main/docs/dashboard.png" align="center"/>
+</a>
