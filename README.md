@@ -1,6 +1,8 @@
 # smart-dumbbell
 Real-time workout classification using Arduino Nano 33 BLE Sense, Edge Impulse, and Web Bluetooth.
 
+## Details
+The Smart Dumbbell can classify four types of movements namely Idle, Biceps Curl, Lateral Raise, and Overhead Press. A confidence score is also displayed showing the model's confidence in the prediction.
 ---
 
 ### Edge Impulse
