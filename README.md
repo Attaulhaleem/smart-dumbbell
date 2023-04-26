@@ -9,7 +9,7 @@ The Smart Dumbbell can classify four types of movements namely Idle, Biceps Curl
 
 ### Edge Impulse
 
-The data collection, model training and testing was done using Edge Impulse Studio. The project can be accessed [here](https://studio.edgeimpulse.com/public/161663/latest).
+The data collection, model training and testing was done using Edge Impulse Studio. The Arduino code relies on the `smartbell_inferencing` library which contains the TinyML model. The library and other project data can be accessed [here](https://studio.edgeimpulse.com/public/161663/latest).
 
 ---
 
